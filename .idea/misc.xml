@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/demo-support/demo-support-launcher" />
+    <file type="web" url="file://$PROJECT_DIR$/demo-web/demo-gateway" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/demo-web/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-support/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-vertx-web/pom.xml" />
+        <option value="$PROJECT_DIR$/trust-support/pom.xml" />
+        <option value="$PROJECT_DIR$/trust-web/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="liberica-11" project-jdk-type="JavaSDK" />
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>
