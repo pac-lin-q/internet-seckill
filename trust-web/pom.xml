@@ -7,6 +7,30 @@
     <groupId>org.trust.seckill</groupId>
     <artifactId>trust-web</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.trust.seckill</groupId>
+            <artifactId>trust-support-export</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.11.4</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+    </dependencies>
     <packaging>pom</packaging>
 
     <properties>
@@ -100,11 +124,10 @@
             </dependency>
 
             <dependency>
-                <groupId>com.demo</groupId>
-                <artifactId>demo-support-export</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <groupId>org.trust.seckill</groupId>
+                <artifactId>trust-support-export</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
-
             <!-- jedis -->
             <dependency>
                 <groupId>redis.clients</groupId>
@@ -119,7 +142,11 @@
                 <version>30.1.1-jre</version>
             </dependency>
 
-
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.20</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
