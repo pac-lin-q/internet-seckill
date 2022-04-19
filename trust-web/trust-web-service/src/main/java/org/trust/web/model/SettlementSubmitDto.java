@@ -1,6 +1,7 @@
-package org.trust.support.web.model;
+package org.trust.web.model;
 
 import lombok.Data;
+
 import java.io.Serializable;
 
 @Data
@@ -10,7 +11,11 @@ public class SettlementSubmitDto implements Serializable {
     private String message;
     private String payPageUrl;
 
-    public void SettlementInitDTO(String code, String message, String payPageUrl){
+    public SettlementSubmitDto(){
+
+    }
+
+    public SettlementSubmitDto(String code, String message, String payPageUrl){
         this.code=code;
         this.message=message;
         this.payPageUrl=payPageUrl;

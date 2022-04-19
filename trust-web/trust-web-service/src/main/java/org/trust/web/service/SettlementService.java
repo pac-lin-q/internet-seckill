@@ -1,4 +1,4 @@
-package org.trust.support.web.service;
+package org.trust.web.service;
 
 import org.trust.support.dto.SettlementOrderDTO;
 import org.trust.support.web.common.TrustException;

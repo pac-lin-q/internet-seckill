@@ -7,6 +7,10 @@
     <groupId>org.trust.seckill</groupId>
     <artifactId>trust-web</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>trust-web-service</module>
+        <module>trust-web-gateway</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>

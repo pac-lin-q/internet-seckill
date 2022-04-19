@@ -1,4 +1,4 @@
-package org.trust.support.web.service.impl;
+package org.trust.web.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,6 +84,28 @@ public class SettlementServiceImpl implements SettlementService {
 
     @Override
     public SettlementSubmitDto submitOrder(SettlementOrderDTO settlementOrderDTO) throws TrustException {
-        return null;
+        //此部分可根据要求增加逻辑，比如风控等等
+        //提交订单
+        settlementOrderDTO.setUserId(UUID.randomUUID().toString());
+        Result<String> orderRresult = settlementExportService.submitOrder(settlementOrderDTO);
+        if (orderRresult==null){
+            throw new TrustException("系统异常");
+        }
+        if (StringUtils.endsWithIgnoreCase(orderRresult.getCode(), ResultCodeConstant.SUCCESS)){
+            throw new TrustException(orderRresult.getMessage());
+        }
+        if (StringUtils.isEmpty(orderRresult.getData())){
+            throw new TrustException("抢购失败！");
+        }
+        //根据订单编号获取支付路径
+        Result<String> payPageUrlResult=settlementExportService.getPayPageUrl(orderRresult.getData());
+        if (payPageUrlResult==null){
+            throw new TrustException("系统异常");
+        }
+        if (StringUtils.endsWithIgnoreCase(payPageUrlResult.getCode(), ResultCodeConstant.SUCCESS)){
+            throw new TrustException(payPageUrlResult.getMessage());
+        }
+        //后续操作可通过消息队列异步调用的方式处理
+        return new SettlementSubmitDto("000000","",payPageUrlResult.getData());
     }
 }

@@ -1,11 +1,11 @@
-package org.trust.support.web.service.impl;
+package org.trust.web.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.trust.support.dto.Result;
 import org.trust.support.dto.SeckillActivityDTO;
 import org.trust.support.export.ActivityExportService;
-import org.trust.support.web.service.SeckillActivityService;
+import org.trust.web.service.SeckillActivityService;
 
 @Service
 public class SeckillActivityServiceImpl implements SeckillActivityService {

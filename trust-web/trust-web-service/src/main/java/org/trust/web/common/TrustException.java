@@ -1,4 +1,4 @@
-package org.trust.support.web.common;
+package org.trust.web.common;
 
 import lombok.Data;
 

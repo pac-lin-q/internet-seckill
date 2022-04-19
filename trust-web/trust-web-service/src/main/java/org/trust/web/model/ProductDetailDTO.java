@@ -1,6 +1,7 @@
-package org.trust.support.web.model;
+package org.trust.web.model;
 
 import lombok.Data;
+
 import java.io.Serializable;
 
 @Data
